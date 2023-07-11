@@ -1,0 +1,52 @@
+Python Modules & Packages
+Python Modules and Packages – An Introduction
+by John Sturtz 
+ basics python
+Tweet Share Email
+Table of Contents
+
+Python Modules: Overview
+The Module Search Path
+The import Statement
+import <module_name>
+from <module_name> import <name(s)>
+from <module_name> import <name> as <alt_name>
+import <module_name> as <alt_name>
+The dir() Function
+Executing a Module as a Script
+Reloading a Module
+Python Packages
+Package Initialization
+Importing * From a Package
+Subpackages
+Conclusion
+Remove ads
+ Watch Now This tutorial has a related video course created by the Real Python team. Watch it together with the written tutorial to deepen your understanding: Python Modules and Packages: An Introduction
+
+This article explores Python modules and Python packages, two mechanisms that facilitate modular programming.
+
+Modular programming refers to the process of breaking a large, unwieldy programming task into separate, smaller, more manageable subtasks or modules. Individual modules can then be cobbled together like building blocks to create a larger application.
+
+There are several advantages to modularizing code in a large application:
+
+Simplicity: Rather than focusing on the entire problem at hand, a module typically focuses on one relatively small portion of the problem. If you’re working on a single module, you’ll have a smaller problem domain to wrap your head around. This makes development easier and less error-prone.
+
+Maintainability: Modules are typically designed so that they enforce logical boundaries between different problem domains. If modules are written in a way that minimizes interdependency, there is decreased likelihood that modifications to a single module will have an impact on other parts of the program. (You may even be able to make changes to a module without having any knowledge of the application outside that module.) This makes it more viable for a team of many programmers to work collaboratively on a large application.
+
+Reusability: Functionality defined in a single module can be easily reused (through an appropriately defined interface) by other parts of the application. This eliminates the need to duplicate code.
+
+Scoping: Modules typically define a separate namespace, which helps avoid collisions between identifiers in different areas of a program. (One of the tenets in the Zen of Python is Namespaces are one honking great idea—let’s do more of those!)
+
+Functions, modules and packages are all constructs in Python that promote code modularization.
+
+Free PDF Download: Python 3 Cheat Sheet
+
+Python Modules: Overview
+There are actually three different ways to define a module in Python:
+
+A module can be written in Python itself.
+A module can be written in C and loaded dynamically at run-time, like the re (regular expression) module.
+A built-in module is intrinsically contained in the interpreter, like the itertools module.
+A module’s contents are accessed the same way in all three cases: with the import statement.
+
+Here, the focus will mostly be on modules that are written in Python. The cool thing about modules written in Python is that they are exceedingly straightforward to build. All you need to do is create a file that contains legitimate Python code and then give the file a name with a .py extension. That’s it! No special syntax or voodoo is necessary.
